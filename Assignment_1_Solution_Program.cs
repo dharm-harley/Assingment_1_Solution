@@ -48,7 +48,7 @@ namespace Assignment1_Spring2021
 
             //Question 5:
             List<string> emails = new List<string>();
-            emails.Add("dis.email + bull@usf.com");
+            emails.Add("dis.email+ bull@usf.com");
             emails.Add("dis.e.mail+bob.cathy@usf.com");
             emails.Add("disemail+david@us.f.com");
             int ans5 = UniqueEmails(emails);
@@ -58,13 +58,13 @@ namespace Assignment1_Spring2021
             //Quesiton 6:
             string[,] paths = new string[,] { { "London", "New York" }, { "New York", "Tampa" },
                                         { "Delhi", "London" } };
-            string destination = DestCity(paths);
+            //string destination = DestCity(paths);
             Console.WriteLine("Q6");
-            Console.WriteLine("Destination city is " + destination);
+            //Console.WriteLine("Destination city is " + destination);
 
         }
 
-        
+
         /// <summary>
         ///Print a pattern with n rows given n as input
         ///n – number of rows for the pattern, integer (int)
@@ -328,12 +328,14 @@ namespace Assignment1_Spring2021
         /// </summary>
         /// <param name="paths"></param>
         /// <returns>The destination city string</returns>
-        private static string DestCity(string [,] paths)
+        /// 
+
+        /*private static string DestCity(string [,] paths)
         {
             try
             {
                 // write your code here.
-                //instantiate hash set
+                /* instantiate hash set
                 var hashSet = new HashSet<string>();
 
                 //add first element of every sub array (city a) to hashset
@@ -353,7 +355,8 @@ namespace Assignment1_Spring2021
                 }
                 return null;
                 return "";
-                //return final_city;    
+                //return final_city; 
+                
             }
             catch (Exception)
             {
@@ -361,8 +364,8 @@ namespace Assignment1_Spring2021
                 throw;
             }
 
-
-        }
+       */ 
+        
 
 
     }
