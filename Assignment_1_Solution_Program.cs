@@ -175,11 +175,12 @@ namespace Assignment1_Spring2021
             try
             {
                 // write your code here
+                // Logic - Combination of for loop to check all the possible options of numbers satisfying the condition
                 for (int a = 0; a * a <= n3; a++)
                 {
                     for (int b = 0; b * b <= n3; b++)
                     {
-                        if (a * a + b * b == n3)
+                        if (a * a + b * b == n3) // checking the fourmula against the number
                             return true;
                     }
                 }
@@ -218,13 +219,13 @@ namespace Assignment1_Spring2021
         /// <returns>Number of pairs in the array with the given number as difference</returns>
         /// 
        
-        // Standard binary search function 
-
+        
         private static int diffPairs(int[] nums, int k)
         {
             try
             {
                 // write your code here.
+                // Logic - Combination of for loop to check all the possible differences
                 int count = 0;
                 
                 nums = nums.Distinct().ToArray();
@@ -236,7 +237,7 @@ namespace Assignment1_Spring2021
                 {
                     // See if there is a pair of this picked element 
                     for (int j = i + 1; j < n; j++)
-                        if (nums[i] - nums[j] == k || nums[j] - nums[i] == k)
+                        if (nums[i] - nums[j] == k || nums[j] - nums[i] == k) // Comparing the diffrence if it satisfies the condition
                             count++;
                 }
                 return count;
@@ -251,10 +252,7 @@ namespace Assignment1_Spring2021
 
         }
 
-        private static int[] Sort(int[] nums)
-        {
-            throw new NotImplementedException();
-        }
+        
 
         /// <summary>
         /// An Email has two parts, local name and domain name. 
@@ -278,6 +276,7 @@ namespace Assignment1_Spring2021
             try
             {
                 // write your code here.
+                // Logic - Combination of foreach loop to create new e-mails strings & comparing 
                 HashSet<string> uniqueEmails = new HashSet<string>();
 
                 foreach (string email in emails)
@@ -335,6 +334,10 @@ namespace Assignment1_Spring2021
             try
             {
                 // write your code here.
+
+                // Logic - Create destination set and then from it eliminate start locations
+                // Last remaining location will be the final destination of the journey
+
                 /* instantiate hash set
                 var hashSet = new HashSet<string>();
 
@@ -346,26 +349,16 @@ namespace Assignment1_Spring2021
 
                 //iterate from last sub array, and check if second element (city b) is not in the hash set	
                 //return second element (city b) of sub array if first element (city a) is not present
-                for (int i = paths.Count - 1; i >= 0; i--)
-                {
-                    if (!hashSet.Contains(paths[i][1]))
-                    {
-                        return paths[i][1];
-                    }
-                }
-                return null;
-                return "";
-                //return final_city; 
-                
-            }
+               
+        }
             catch (Exception)
             {
                 Console.WriteLine("Invalid input");
                 throw;
             }
 
-       */ 
-        
+       */
+
 
 
     }
